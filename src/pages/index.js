@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Banner from "~/components/Banner";
+import slides from '@api';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,7 +14,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <div className={`${inter.className} container`}>
-        <Banner />
+        <Banner slides={slides}/>
       </div>
     </>
   );
