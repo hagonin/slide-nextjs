@@ -1,0 +1,41 @@
+.slider__button {
+    --size: 60px;
+    --spacing: 2px;
+    width: var(--size);
+    height: var(--size);
+
+    position: absolute;
+    bottom: var(--spacing);
+    z-index: 10;
+    
+    background-color: var(--color-black);
+    cursor: pointer;
+    transition: all linear 300ms;
+}
+
+@media only screen and (max-width: 1024px) {
+    .slider__button {
+        display: none;
+    }
+}
+
+.slider__button img {
+    transition: all ease-out 300ms;
+    transform: scale(1);
+}
+
+.slider__button:hover {
+    background-color: var(--color-primary);
+}
+
+.slider__button:hover img {
+    transform: scale(1.6);
+}
+
+.slider__nextButton {
+    right: var(--spacing);
+}
+
+.slider__previousButton {
+    right: calc(var(--size) + var(--spacing));
+}
